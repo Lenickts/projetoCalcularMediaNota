@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcular a Média</title>
+</head>
+<body>
+    <main class="main-container">
+        <h1>Calcular a Média do Aluno</h1>
+        <section class="main-content">
+            <div class="form-container">
+                <form id="form-notas">
+                    <label for="nome">Nome completo do aluno:</label>
+                    <input type="text" id="nome" name="nome">
+
+                    <label for="nota1">Informe a nota 1</label>
+                    <input type="number" id="nota1" name="nota1">
+                    <label for="nota2">Informe a nota 2</label>
+                    <input type="number" id="nota2" name="nota2">
+                    <label for="nota3">Informe a nota 3</label>
+                    <input type="number" id="nota3" name="nota3">
+
+                    <button type="submit" id="btn">Calcular</button>
+                </form>                
+            </div> <!-- fim form-container -->
+        </section>
+        <section>
+            <h2>Nota final do Aluno</h2>
+            <div id="mensagem"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
