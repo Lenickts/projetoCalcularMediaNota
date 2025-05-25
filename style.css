@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik+Wet+Paint&family=Shadows+Into+Light&family=Telex&display=swap&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/* Josefin  / Rubik Wet / Telex / Gloria Hallelujah / Roboto Mono */
+/* Josefin / Rubik Wet / Telex / Gloria Hallelujah / Roboto Mono */
 
 :root{
     --fonte-titulo: "Rubik Wet Paint", system-ui;
@@ -7,10 +7,117 @@
     --fonte-sec:"Josefin Sans", sans-serif;
     --fonte-robo: "Roboto Mono", monospace;
     --fonte-Generic: "Montserrat", sans-serif;
+    --shadow: 3px 3px 7px 7px #DEB887;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+} 
+body{
+    height: 100vh;
+    background-color: #F5DEB3;
+}
+h1{
+    font-family: var(--fonte-sec);
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#form-notas{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 80px 80px;
+    grid-template-areas: 
+    'nome nome nome'
+    'nota1 nota2 nota3';
+    font-family: var(--fonte-Generic);
+    padding: 20px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+    margin: 20px;
+    height: 50vh;
+    width: 80vw;
+}
+.final-content{
+    font-family: var(--fonte-Generic);
+    padding: 20px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+    margin: 20px;
+    height: 50vh;
+    width: 80vw;
+}
+.final-content h2{
+    text-align: center;
+}
+#n{
+    grid-area: nome;
+    display: flex;
+    flex-direction: column;
+}
+#n1{
+    grid-area: nota1;
+}
+#n2{
+    grid-area: nota2;
+}
+#n3{
+    grid-area: nota3;
+}
+#n input{
+    height: 25px;
+    width: 300px;
+}
+#n1 input, #n2 input, #n3 input{
+    height: 30px;
+    width: 80px;
+}
+label{
+    font-weight: 500;
+}
+#btn{
+    height: 30px;
+    border:1px solid #F4A460;
+    border-radius: 7px;
+    box-shadow: var(--shadow);
+    color: white;
+    background-color: #DEB887;
+    cursor: pointer;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, font-size 0.2s ease-in-out;
+}
+#btn:hover{
+    color: black;
+    background-color: #F5DEB3;
+    font-size: 15px;
+}
+input{
+    border: none;
+    border-radius: 5px;
+    background-color: #F5DEB3;
+}
+#mensagem{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'aluno media'
+    'aprov aprov';
+    gap: 15px;
+    margin-top: 15px;
+}
+#nomeMedia{
+    grid-area: aluno;
+}
+#notaMedia{
+    grid-area: media;
+}
+#aprov{
+    grid-area: aprov;
 }

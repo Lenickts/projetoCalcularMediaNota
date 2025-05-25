@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //Apresentar informações na DOM
         document.getElementById("mensagem").innerHTML = `
-            <p><strong>Aluno: </strong> ${aluno.nome}</p>
-            <p><strong>Média: </strong> ${mediaFormatada}</p>
-            <p>${verificaAprovacao(aluno.nome,media)}</p>`;
+            <p id="nomeMedia"><strong>Aluno: </strong> ${aluno.nome}</p>
+            <p id="notaMedia"><strong>Média: </strong> ${mediaFormatada}</p>
+            <p id="aprov">${verificaAprovacao(aluno.nome,media)}</p>`;
     });
 
     //Validando a média
